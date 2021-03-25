@@ -1,0 +1,52 @@
+.secService{
+    background-color: #EBEBEB!important;
+}
+.divService{
+    height:auto;
+    width:100%;
+    width:100vw;
+    background-color: #EBEBEB;
+    margin-top:-8px;
+}
+
+.GroupDiscussion{
+    background-image: url('../../assets/logos/GD.jpg');
+    width:400px;
+    height:400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 5px;
+    display:inline-block;
+}
+
+.Speech{
+    background-image: url('../../assets/logos/Speech.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.PersonalInterview{
+    background-image: url('../../assets/logos/PI.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.img-circle{
+    border-radius: 50%;
+}
+
+.fa-4x{
+    font-size: 4rem;
+}
+
+.fa-stack{
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}

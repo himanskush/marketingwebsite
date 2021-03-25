@@ -1,0 +1,24 @@
+#fullbar{
+    background-color: #FFF343;
+    height: 62px;
+    width:100vw;
+    align-content: center;
+}
+
+.navbar{
+    justify-content: start;
+}
+
+.navbar-dark .navbar-brand{
+    color:black;
+    font-weight: 500;
+}
+
+#navlinks{
+    color:black;
+}
+
+#responsive-navbar-nav{
+    justify-content: flex-end;
+}
+

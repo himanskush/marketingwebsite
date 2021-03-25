@@ -1,0 +1,19 @@
+.divContact{
+    background-color: #F7F9F8!important;
+    width: 100%;
+    width:100vw;
+}
+
+ .txtFieldEmail{
+    width:calc(79% + 1vw + 1vh)!important;
+}
+
+/*
+.txtFieldMessage{
+    width:52ch!important;
+} */
+
+.Info{
+    text-align: center;
+}
+

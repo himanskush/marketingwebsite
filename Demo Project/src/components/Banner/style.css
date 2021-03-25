@@ -1,0 +1,43 @@
+.divBanner{
+    background-image: url('../../assets/logos/CarouselBanner.png');
+    width:100%;
+    width: 100vw;
+    height:650px;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: inline-grid;
+}
+
+
+
+.txtBanner{
+    /* font-size: 66px; */
+    font-size: calc(100% + 2vw + 2vh);
+    color: white;
+    text-shadow: 1px 1px 3px #000;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    line-height: 1.8;
+    transform: scale(1, 1.2);
+    text-align: center;
+    font-family: revert;
+    justify-content: center;
+    margin-top:15px;
+}
+
+.txtBannerFooter{
+    color:white;
+    border-top:2px solid white;
+    border-bottom:2px solid white;
+    text-align: center;
+    font-family: 'Oswald',Arial,sans-serif;
+    font-size: 26px;
+    margin:auto;
+    justify-content: center;
+    margin-bottom: 60px;
+}

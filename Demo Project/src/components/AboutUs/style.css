@@ -1,0 +1,23 @@
+.divAbout{
+    height:auto;
+    width:100%!important;
+    width: 100vw!important;
+    background-color: #F7F9F8;
+}
+
+.dvAbUsContent{
+    display: flex;
+}
+
+.divImg{
+    display: contents;
+}
+
+#imgAboutUs{
+    width:350px;
+    height:250px;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 15px;
+}
