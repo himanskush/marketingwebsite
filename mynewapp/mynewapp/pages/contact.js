@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 
 /* middleware */
 import {
@@ -23,10 +24,6 @@ const FORM_DATA_CONTACT = {
     min: 3,
     max: 36,
     required: true,
-    validator: {
-      regEx: /^[a-zA-Z\\s]*$/,
-      error: 'Please insert valid name',
-    },
   },
   email: {
     value: '',
@@ -49,18 +46,12 @@ const FORM_DATA_CONTACT = {
   contactno: {
     value: '',
     label: 'contactno',
-    min: 10,
-    max: 10,
     required: true,
-    validator: {
-      regEx: /^[1-9]{1}[0-9]{9}$/,
-      error: 'Please insert valid contact number',
-    },
   },
 };
 
 export default function Contact(props) {
-  const { profile } = props;
+  const { baseApiUrl, profile } = props;
   const [stateFormData, setStateFormData] = useState(FORM_DATA_CONTACT);
   const [stateFormError, setStateFormError] = useState([]);
   const [stateFormValid, setStateFormValid] = useState(false);
@@ -98,10 +89,8 @@ export default function Contact(props) {
     const isValid = validationHandler(stateFormData);
 
     if (isValid) {
-      // Call an external API endpoint to get posts.
-      // You can use any data fetching library
       setLoading(!loading);
-      const loginApi = await fetch(`${baseApiUrl}/auth`, {
+      const contactApi = await fetch(`${baseApiUrl}`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -111,14 +100,10 @@ export default function Contact(props) {
       }).catch(error => {
         console.error('Error:', error);
       });
-      let result = await loginApi.json();
-      if (result.success && result.token) {
-        Cookies.set('token', result.token);
-        // window.location.href = referer ? referer : "/";
-        // const pathUrl = referer ? referer.lastIndexOf("/") : "/";
-        Router.push('/');
-      } else {
-        setStateFormMessage(result);
+      let result = await contactApi.json();
+      console.log(result)
+      if (result.success == "Success"){
+        Router.push('/contactsuccess');
       }
       setLoading(false);
     }
@@ -248,6 +233,7 @@ export default function Contact(props) {
               </div>
             </>
           ) : (
+            <>
             <div>
               <div style={{ margin: '.5rem 0rem' }}>
                 <Link href={{ pathname: '/' }}>
@@ -268,6 +254,19 @@ export default function Contact(props) {
                 </fieldset>
               </div>
             </div>
+            <div>
+                <FormContact
+                  props={{
+                    onSubmitHandler,
+                    onChangeHandler,
+                    loading,
+                    stateFormData,
+                    stateFormError,
+                    stateFormMessage,
+                  }}
+                />
+              </div>
+            </>
           )}
         </main>
       </div>
