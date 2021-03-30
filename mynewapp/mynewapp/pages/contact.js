@@ -102,9 +102,9 @@ export default function Contact(props) {
       });
       let result = await contactApi.json();
       console.log(result)
-      if (result.success == "Success"){
+      //if (result.success == "Success"){
         Router.push('/contactsuccess');
-      }
+      //}
       setLoading(false);
     }
   }

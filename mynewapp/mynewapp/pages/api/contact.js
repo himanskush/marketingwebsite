@@ -1,38 +1,23 @@
-const CODE = 200;
+import axios from 'axios'
 
-export default (req, res) => {
-  return new Promise(resolve => {
-    const { method } = req;
-    let message = {};
-    try {
-      switch (method) {
-        case 'POST':
-          /* Post method */
-          const { name, email, contactno, message } = req.body;
-          return res.status(200).json({
-            name: name,
-            email: email,
-            contactno: contactno,
-            message: message,
-            success: 'Success',
-          });
-          break;
-        case 'PUT':
-          /* Put method */
-          break;
-        case 'PATCH':
-          /* Patch method */
-          break;
-        /* Get */
-        default:
-          break;
+async function handler(req,res){
+    //console.log(`req`, req.body);
+    const { name, email, contactno, message } = req.body;
+    const response= await axios.post(`http://localhost:8002/contactqueries/?`,{
+      name:name,
+      email:email,
+      contactno:contactno,
+      message: message,
+      success: 'Success'
+    });
+    const oldresponse= await axios.get(`http://localhost:8002/contactqueries/?`,{
+      params: {
+        email: email
       }
-      res.statusCode = CODE;
-      res.json({ message });
-    } catch (error) {
-      throw error;
-    }
-    res.status(405).end();
-    return resolve();
-  });
-};
+    });
+    //res.json(JSON.stringify(response.data));
+    res.json(JSON.stringify(oldresponse.data));
+}
+
+export default handler;
+ 
