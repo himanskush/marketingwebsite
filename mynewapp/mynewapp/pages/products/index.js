@@ -46,8 +46,28 @@ export default function Product(props) {
                   <h4>Created: {profile.createdAt}</h4>
                 </fieldset>
               </div>
+              <Link href="./products/1">
+                <button>
+                <a className="">Buy</a>
+                  <style jsx>{`
+                    button{
+                      margin: 40px 0px 10px 0px;
+                      color: white;
+                      font-size: 17px;
+                      border-radius: 15px;
+                      padding: 10px 25px;
+                      border: 1px #acacac solid;
+                      cursor: pointer;
+                      background: deeppink;
+                      font-weight: bold;
+                    }
+                    `}
+                  </style>
+                </button>
+              </Link>
             </div>
           )}
+
         </main>
       </div>
     </Layout>
