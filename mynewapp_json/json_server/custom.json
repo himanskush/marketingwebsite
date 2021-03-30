@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "saksham",
+      "usertype": "admin",
+      "pwd": "1234",
+      "mobile": "9810865153"
+    },
+    {
+      "id": 2,
+      "username": "hello",
+      "usertype": "user",
+      "pwd": "123",
+      "mobile": "85272450283"
+    },
+    {
+      "username": "pulkit",
+      "pwd": "123456",
+      "id": "3",
+      "mobile": "9810865153",
+      "usertype": "user"
+    },
+    {
+      "username": "example1@example.com",
+      "pwd": "password",
+      "id": "5",
+      "mobile": "9810865193",
+      "usertype": "user"
+    },
+    {
+      "username": "example2@example.com",
+      "pwd": "password",
+      "id": "6",
+      "mobile": "9810865193",
+      "usertype": "user"
+    },
+    {
+      "username": "example2@example.com4",
+      "pwd": "password",
+      "id": "7",
+      "mobile": "9810865193",
+      "usertype": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productname": "Monthly",
+      "price": "8000"
+    },
+    {
+      "id": 2,
+      "productname": "Quarterly",
+      "price": "22000"
+    },
+    {
+      "id": 3,
+      "productname": "Yearly",
+      "price": "80000"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userid": 1,
+      "productid": 1,
+      "productname": "Monthly",
+      "price": "8000"
+    },
+    {
+      "id": 2,
+      "userid": 1,
+      "productid": 2,
+      "productname": "Quarterly",
+      "price": "22000"
+    },
+    {
+      "id": 3,
+      "userid": 2,
+      "productid": 2,
+      "productname": "Quarterly",
+      "price": "22000"
+    }
+  ]
+}
