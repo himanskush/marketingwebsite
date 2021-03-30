@@ -22,7 +22,7 @@ import Layout from '../../components/layout/Layout';
 export default function Productpage(props) {
   const { profile } = props;
   const productIndex = Post();
-  let imgPath = props.productData[productIndex].desciption.image;
+
   function handleOnClickLogout(e) {
     setLogout(e);
   }
@@ -34,8 +34,7 @@ export default function Productpage(props) {
         <main>
           <div style={{padding:50,display:"flex"}}>
             <div> 
-              <img src={{imgPath}} height="400" width="600"></img>
-              {/* <img src={props.productData[productIndex].desciption.image} height="400" width="600"></img> */}
+              <img src={props.productData[productIndex].image} height="400" width="600"></img>
             </div>
             <div style={{paddingLeft:30}}>
               <span style={{fontWeight:700,fontSize:24}}>{props.productData[productIndex].productName}</span>
