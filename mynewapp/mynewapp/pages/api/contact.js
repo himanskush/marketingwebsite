@@ -8,6 +8,14 @@ export default (req, res) => {
       switch (method) {
         case 'POST':
           /* Post method */
+          const { name, email, contactno, message } = req.body;
+          return res.status(200).json({
+            name: name,
+            email: email,
+            contactno: contactno,
+            message: message,
+            success: 'Success',
+          });
           break;
         case 'PUT':
           /* Put method */
