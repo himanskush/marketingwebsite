@@ -87,8 +87,9 @@ export default function Contact(props) {
     data = { ...data, message: data.message.value || '' };
     /* validation handler */
     const isValid = validationHandler(stateFormData);
-
+    console.log("isValiddddd:");
     if (isValid) {
+      console.log("isValid:",isValid);
       setLoading(!loading);
       const contactApi = await fetch(`${baseApiUrl}`, {
         method: 'POST',
