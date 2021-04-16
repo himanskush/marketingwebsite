@@ -86,9 +86,10 @@ export default function Product(props) {
               </div>
               <div style={{display:"flex"}}>
                   {
-                    props.productData.map((val) => {
+                    props.productData.map((val,index) => {
                       return(
-                        <Card className={classes.root} raised={true}>
+                        
+                        <Card className={classes.root} raised={true} key={index}>
                           <CardContent >
                             <Typography className={classes.title} color="textSecondary" gutterBottom>
                               {val.productName}

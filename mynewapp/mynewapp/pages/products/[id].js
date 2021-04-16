@@ -11,8 +11,9 @@ import {
 
 const Post = () => {
   const router = useRouter();
-  const { id } = router.query;
-
+  let { id } = router.query;
+  id = id ? id-1: id;
+  console.log(id);
   return id;
 }
 

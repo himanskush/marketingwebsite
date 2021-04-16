@@ -2,22 +2,22 @@
 const PRODUCTS = [
     {
         id:1,
-        productName:"Monthly",
+        productName:"Monthly Plan",
         price:"8000",
-        desciption:"A",
+        desciption:"30 GB SSD Storage",
         image:"https://www.w3schools.com/w3css/img_lights.jpg",
     },
     {
         id:2,
-        productName:"Quarterly",
+        productName:"Quarterly Plan",
         price:"22000",
-        desciption:"B",
+        desciption:"100 GB SSD Storage",
         image:"https://scx2.b-cdn.net/gfx/news/2019/2-nature.jpg",
     },{
         id:3,
-        productName:"Yearly",
+        productName:"Yearly Plan",
         price:"80000",
-        desciption:"C",
+        desciption:"200 GB SSD Storage",
         image:"https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/325466_1100-1100x628.jpg",
     }
 ];
